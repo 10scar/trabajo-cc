@@ -1,6 +1,6 @@
 # Proyecto C.C
 
-_Descripción proyecto......_
+_Las personas somos la unión de nuestros seres y nuestros mundos, encuentra un equilibrio entre ellos y estarás un poco más cerca de la felicidad, el programa te dara el coeficiente de que tanta angustia existencial tienes_
 
 ## Comenzando 🚀
 

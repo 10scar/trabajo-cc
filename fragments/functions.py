@@ -10,9 +10,9 @@ def individual_maze(ser, egoismo):
     if (b < 0):
         recomvir = "El modelo te sugiere re plantear tus expectativas a unas más cercanas a tú realidad"
     else:
-        recomvir = "El modelo te recomienda trabajar en tu realidad para acercarla a tú ideal"       
-    
-    individual = (a + abs(b) + g) * egoismo  
+        recomvir = "El modelo te recomienda trabajar en tu realidad para acercarla a tú ideal"
+
+    individual = (a + abs(b) + g) * egoismo
     if (individual < 0):
         recomtotal = "El modelo te recomienda re ponderar los valores"
     else:
@@ -20,8 +20,8 @@ def individual_maze(ser, egoismo):
 
     enunciado = ("dado el modelo este es el valor de cada una de las categorías, Placer {}, Virtud {}, Conocimiento {}").format(a,abs(b),g)
     if (recomtotal == False):
-        return(enunciado + " " + recomvir, individual)
-    return(enunciado + " " + recomvir + " " + individual, indivdual)
+        return(recomvir, individual,a,abs(b),g)
+    return(recomtotal + recomvir,individual, a,abs(b),g)
 
 def world_maze(mundo, altruismo):
     altruismo = int(altruismo[1])
@@ -36,7 +36,7 @@ def world_maze(mundo, altruismo):
 
     world = (a + b + g) * altruismo
     return(world)
-   
+
 def loved_maze(laberintopasion, altruismo):
     altruismo = int(altruismo[1])
     lideal = int(laberintopasion[0])
@@ -51,9 +51,9 @@ def loved_maze(laberintopasion, altruismo):
     loved = (a + b + g) * altruismo
     return(loved)
 
-def lambd(individual, world, loved):    
+def lambd(individual, world, loved):
     if (loved < 5):
-        lamb = indvidual + world
+        lamb = individual + world
         return(lamb)
     else:
         lamb = individual + loved
@@ -63,5 +63,5 @@ def anguish(lamb, amor, verlaine):
     lis = []
     omega = lamb/amor
     anguish = omega * verlaine
-    strang = "Tú total de angustia es {}".format(anguish)
+    strang = "Tú total de angustia es {}".format(int(anguish))
     return(strang)

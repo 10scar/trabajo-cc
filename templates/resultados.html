@@ -21,21 +21,26 @@ body {
         <div class="col-12">
           <nav class="navbar fixed-top shadow p-1 navbar-expand-lg navbar-light bg-light rounded bg-faded">
             <div class="container-fluid">
-              <a class="navbar-brand " href="#">¿Qué Tan Miserable eres?</a>
+              <a class="navbar-brand " href="#">¿¿Qué Tanta Angustia Existencial Tienes?</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
                   <li class="nav-item ">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="/">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Resultados</a>
+                    <a class="nav-link" href="/static/Fragments.pdf">Documento Base</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">GitHub</a>
+                    <a class="nav-link" href="https://github.com/10scar/trabajo-cc">GitHub</a>
                   </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="static/presentacion.pdf">Presentación</a>
+                  </li>
+                  
                 </ul>
               </div>
               <a class="navbar-brand" href="#">
@@ -51,7 +56,7 @@ body {
         <div class="card-header d-flex justify-content-center bg-white text-dark"><B>Virtud</B></div>
         <div class="card-body">
 
-        <div class="col-6 col-sm-6"><h1>fsfdsfds</h1></div>
+        <div class="col-12 text-center"><h3>Tú valor de Virtud es de {{b}}</h3></div>
         </div>
       </div>
       </div>
@@ -61,7 +66,7 @@ body {
         <div class="card-header d-flex justify-content-center bg-white text-dark"><B>Conocimineto</B></div>
         <div class="card-body">
 
-        <div class="col-6 col-sm-6"><h1>fsfdsfds</h1></div>
+        <div class="col-12 text-center"><h3>Tú valor de Conocimiento es de {{g}}</h3></div>
         </div>
       </div>
       </div>
@@ -69,8 +74,7 @@ body {
         <div class="card shadow p-1   text-dark bg-light mt-3 rounded " style="max-width: 100rem;">
         <div class="card-header d-flex justify-content-center bg-white text-dark"><B>Placer</B></div>
         <div class="card-body">
-
-        <div class="col-6 col-sm-6"><h1>fsfdsfds</h1></div>
+        <div class="col-12 text-center"><h3>Tú valor de placer es de {{a}}</h3></div>
         </div>
       </div>
       </div>
@@ -81,7 +85,9 @@ body {
         <div class="card-header d-flex justify-content-center bg-white text-dark"><B>Resultados</B></div>
         <div class="row align-items-center">
           <div class="col-6 col-sm-6 "><img src="static/img/res.png" alt="" width="180" height="180" class="ms-5 mt-5 mb-5"></div>
-          <div class="col-6 "><h2>Tu porcentaje de angustia existencial es</h2></div>
+          <div class="col-6 "><h2>{{anguish}}</h2></div>
+          <center><div class="col-12"><h6>{{string}}</h6></div></center>
+
         </div>
       </div>
       </div>

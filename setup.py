@@ -1,5 +1,5 @@
 from flask import Flask, render_template,abort ,request
-from fragments import functions 
+from fragments import functions
 
 app = Flask(__name__)
 
@@ -16,11 +16,12 @@ def procesar():
 		laberintospasion = (request.form.get('pregunta-laberintos-1'),request.form.get('pregunta-laberintos-2'),request.form.get('pregunta-laberintos-3'))
 		amor = request.form.get('pregunta-amor-1')
 		verlaine = request.form.get('pregunta-Verlaine-1')
+
 		world = (functions.world_maze(mundo, altruismoegoismo))
-		(string, value) = functions.individual_maze(ser, altruismoegoismo)
+		(string, value,a,b,g) = functions.individual_maze(ser, altruismoegoismo)
 		loved = functions.loved_maze(laberintospasion,altruismoegoismo)
 		lam = functions.lambd(value, world, loved)
 		anguish = functions.anguish(lam,int(amor), int(verlaine))
-		return '<p>{0}, {1},</p>'.format(string, anguish)
-
+		#return '<p>{0}, {1},</p>'.format(string, anguish)
+		return render_template("resultados.html",anguish=anguish, string=string, a=a,b=b, g=g )
 app.run("0.0.0.0",5000,debug=True)
