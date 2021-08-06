@@ -22,6 +22,5 @@ def procesar():
 		loved = functions.loved_maze(laberintospasion,altruismoegoismo)
 		lam = functions.lambd(value, world, loved)
 		anguish = functions.anguish(lam,int(amor), int(verlaine))
-		#return '<p>{0}, {1},</p>'.format(string, anguish)
 		return render_template("resultados.html",anguish=anguish, string=string, a=a,b=b, g=g )
 app.run("0.0.0.0",5000,debug=True)
